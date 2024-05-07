@@ -13,14 +13,14 @@ const FeatureCard = ({ imageUrl, title, description }) => {
 const WhatsAppCRM = () => {
   return (
     <div className="sub-feature-card-container" id="features">
-      <div className="homepage-container sub-feature">
-        <div className="w-container homepage-container mt-12 lg:mx-16 mx-8">
-          <h2 className="feature-heading text-5xl lg:text-7xl  mb-6">
+      <div className="homepage-container sub-feature lg:mx-32 mx-8 ">
+        <div className="w-container homepage-container mt-12">
+          <h2 className="feature-heading text-3xl lg:text-5xl  mb-6">
             <span className="text-blue-500 lg:inline-block lg:w-full">
               Key Features
             </span>
           </h2>
-          <p className="feature-description text-2xl  w-full ">
+          <p className="feature-description text-xl  w-full ">
             In simple terms, Leadesh is your personal assistant that listens out
             for the words and phrases that matter most to you. It saves you the
             hassle of manually checking every conversation, and ensures you're
@@ -29,7 +29,7 @@ const WhatsAppCRM = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mx-12 my-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-12">
           <FeatureCard
             imageUrl="https://assets-global.website-files.com/62396affb4902ba54e57a971/64ae7f2cc9e27e1eff005209_Sync%20to%20CRM.png"
             title="Track the Words that Matter to You"

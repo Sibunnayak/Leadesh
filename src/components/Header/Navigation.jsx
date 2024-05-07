@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import logo from "../../assets/logo.png";
+import leadesh from "../../assets/Leadesh.png";
 import hamburger from "../../assets/Hamburger.png";
 import {
   FaFacebook,
@@ -26,8 +27,8 @@ const Navigation = () => {
       <div className="sticky top-0 bg-gray-900 w-full flex justify-between items-center px-6 py-2 text-white">
         <div className="flex items-center">
           <Link to="/" className="logo flex items-center">
-            <img src={logo} alt="logo" className="h-16 p-1" />
-            <span className="ml-2 md:mx-auto">cooby</span>
+            <img src={logo} alt="logo" className="h-16 p-1 mr-1" />
+            <img src={leadesh} loading="lazy" alt="" className="w-20" />
           </Link>
         </div>
         <div className="w-1/2 flex justify-end items-center lg:mr-24 mr-6">
@@ -91,8 +92,8 @@ const Navigation = () => {
           <div className="flex justify-center items-center max-sm:mt-16 mt-28">
             <div className="flex items-center">
               <Link to="/" className="logo flex items-center">
-                <img src={logo} alt="logo" className="h-16 p-1" />
-                <span className="ml-2 md:mx-auto">Leadesh</span>
+                <img src={logo} alt="logo" className="h-16 p-1 mr-1" />
+                <img src={leadesh} loading="lazy" alt="" className="w-20" />
               </Link>
             </div>
           </div>
@@ -131,19 +132,37 @@ const Navigation = () => {
             </Link>
           </div>
           <div className="flex justify-center items-center my-2 mx-auto">
-            <FaFacebook
-              style={{ color: "#3b5998", marginRight: "3rem" }}
-              size={32}
-            />
-            <FaInstagram
-              style={{ color: "#e4405f", marginRight: "3rem" }}
-              size={32}
-            />
-            <FaTwitter
-              style={{ color: "#00acee", marginRight: "3rem" }}
-              size={32}
-            />
-            <FaLinkedin style={{ color: "#0077b5" }} size={32} />
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginRight: "3rem" }}
+            >
+              <FaFacebook style={{ color: "#3b5998" }} size={32} />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginRight: "3rem" }}
+            >
+              <FaInstagram style={{ color: "#e4405f" }} size={32} />
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginRight: "3rem" }}
+            >
+              <FaTwitter style={{ color: "#00acee" }} size={32} />
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin style={{ color: "#0077b5" }} size={32} />
+            </a>
           </div>
           {/* <div className="flex justify-center items-center my-8 mx-auto">
             <FaHome
@@ -158,7 +177,10 @@ const Navigation = () => {
             </p>
           </div> */}
           <div className="flex justify-center items-center my-8 mx-auto">
-            <p className="text-center text-white ">©Cooby LLP - 2024</p>
+            <p className="text-center text-white ">
+              © 2023 - 2024 Neonflake Enterprises OPC Pvt Ltd. All Rights
+              Reserved.
+            </p>
           </div>
         </div>
       )}

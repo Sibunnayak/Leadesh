@@ -7,6 +7,7 @@ import Pricing from "./components/Pricing/Pricing";
 import HowitWorks from "./components/HowitWorks/HowitWorks";
 import WhatsAppCRM from "./components/WhatsAppCRM/WhatsappCRM";
 import Navigation from "./components/Header/Navigation";
+import AboutUs from "./Pages/AboutUs/AboutUS";
 
 const App = () => {
   return (
@@ -15,17 +16,12 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
         {/* Define other routes here */}
       </Routes>
-      <WhatsAppCRM />
-      <HowitWorks />
-      <Pricing />
       <Footer />
     </Router>
   );
 };
 
 export default App;
-
-
-
