@@ -3,9 +3,9 @@ import whatsapplogo from "../../assets/whatsapp.svg";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import WhatsAppCRM from "../WhatsAppCRM/WhatsappCRM";
-import HowitWorks from "../HowitWorks/HowitWorks";
-import Pricing from "../Pricing/Pricing";
+import WhatsAppCRM from "../../components/WhatsAppCRM/WhatsappCRM";
+import HowitWorks from "../../components/HowitWorks/HowitWorks";
+import Pricing from "../../components/Pricing/Pricing";
 import "./Home.css"
 const Home = () => {
   return (

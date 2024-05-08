@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="sticky top-0 bg-gray-900 w-full flex justify-between items-center px-6 py-2 text-white">
         <div className="flex items-center">
           <Link to="/" className="logo flex items-center">
-            <img src={logo} alt="logo" className="h-16 p-1 mr-1" />
+            <img src={logo} alt="logo" className="h-16 p-1 mr-1 rounded-xl" />
             <img src={leadesh} loading="lazy" alt="" className="w-20" />
           </Link>
         </div>
@@ -92,7 +92,7 @@ const Navigation = () => {
           <div className="flex justify-center items-center max-sm:mt-16 mt-28">
             <div className="flex items-center">
               <Link to="/" className="logo flex items-center">
-                <img src={logo} alt="logo" className="h-16 p-1 mr-1" />
+                <img src={logo} alt="logo" className="h-16 p-1 mr-1 rounded-xl" />
                 <img src={leadesh} loading="lazy" alt="" className="w-20" />
               </Link>
             </div>

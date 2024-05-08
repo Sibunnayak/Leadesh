@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Company Information */}
         <div className="flex flex-col items-center mb-8  mx-10 sm:mx-16 lg:w-1/3">
           <div className="mb-2.5 flex flex-row items-center">
-            <img src={logo} loading="lazy" alt="" className="w-16 mr-4" />
+            <img src={logo} loading="lazy" alt="" className="w-16 mr-4 rounded-xl" />
             <img src={leadesh} loading="lazy" alt="" className="w-20" />
           </div>
 
