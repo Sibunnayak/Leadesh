@@ -31,10 +31,10 @@ const HowitWorks = () => {
   }, []);
   return (
     <div className="how-it-works bg-gray-100" id="Howitworks">
-      <div className="homepage-container">
+      <div className="homepage-container lg:mx-32 mx-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 py-10">
-          <div className="flex flex-col justify-center items-start md:ml-8 max-sm:w-5/6 max-sm:mx-auto">
-            <h2 className="text-6xl font-bold mb-4 md:mb-0 max-sm:text-5xl">
+          <div className="flex flex-col justify-center items-start max-sm:mx-auto">
+            <h2 className="text-6xl font-bold mb-4 md:mb-2 max-sm:text-5xl">
               How Leadesh Works
             </h2>
             <p className="text-lg mb-6">
@@ -44,7 +44,7 @@ const HowitWorks = () => {
           </div>
         </div>
         {/* accordion */}
-        <div className="flex flex-col lg:flex-row lg:space-x-6 mx-6">
+        <div className="flex flex-col lg:flex-row lg:space-x-6">
           <div className="w-full lg:w-1/2 mb-6 md:mb-0">
             <Accordion
               expanded={openAccordion === 1}

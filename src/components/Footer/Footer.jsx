@@ -5,9 +5,9 @@ import { Link as ScrollLink } from "react-scroll";
 const Footer = () => {
   return (
     <footer className="py-10 border-t bg-gray-900 shadow-lg">
-      <div className="flex flex-col lg:flex-row ">
+      <div className="flex flex-col lg:flex-row lg:mx-28 mx-10">
         {/* Company Information */}
-        <div className="flex flex-col items-center mb-8  mx-10 sm:mx-16 lg:w-1/3">
+        <div className="flex flex-col items-start mb-8  sm:mx-16 lg:w-1/3">
           <div className="mb-2.5 flex flex-row items-center">
             <img src={logo} loading="lazy" alt="" className="w-16 mr-4 rounded-xl" />
             <img src={leadesh} loading="lazy" alt="" className="w-20" />
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-12 gap-4 lg:gap-12 justify-center ">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-sm:-ml-9 md:px-14 gap-4 lg:gap-12 justify-center ">
           {/* Links */}
           <div className="flex flex-col mx-10 sm:mx-0">
             <div className="text-xl font-bold mb-2.5 text-white">Links</div>
@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="bg-gray-50 w-2/3 mx-auto my-5 opacity-10" />
-      <div className="text-white text-center sm:text-xs md:text-sm mb-4">
+      <div className="text-white text-center max-sm:text-xs text-sm mb-4 max-sm:mx-6">
         <p>
           © 2023 - 2024 Neonflake Enterprises OPC Pvt Ltd. All Rights Reserved.
         </p>

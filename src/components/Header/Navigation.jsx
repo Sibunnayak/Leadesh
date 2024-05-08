@@ -24,14 +24,14 @@ const Navigation = () => {
 
   return (
     <div className="mx-auto overflow-x-hidden max-w-screen-2xl relative">
-      <div className="sticky top-0 bg-gray-900 w-full flex justify-between items-center px-6 py-2 text-white">
+      <div className="sticky top-0 bg-gray-900 w-full flex justify-between items-center lg:px-28 px-7 py-2 text-white">
         <div className="flex items-center">
           <Link to="/" className="logo flex items-center">
             <img src={logo} alt="logo" className="h-16 p-1 mr-1 rounded-xl" />
             <img src={leadesh} loading="lazy" alt="" className="w-20" />
           </Link>
         </div>
-        <div className="w-1/2 flex justify-end items-center lg:mr-24 mr-6">
+        <div className="w-1/2 flex justify-end items-center">
           <div className="xl:hidden cursor-pointer" onClick={toggleNavLinks}>
             <img src={hamburger} alt="Hamburger Icon" width={40} />
           </div>
@@ -82,7 +82,7 @@ const Navigation = () => {
         </div>
       </div>
       {showNavLinks && (
-        <div className="fixed top-0 left-0 bottom-0 right-0 bg-gray-900 text-white overflow-auto">
+        <div className="fixed  top-0 left-0 bottom-0 right-0 bg-gray-900 text-white overflow-auto z-10">
           <div
             className="absolute top-8 max-sm:top-3 max-sm:right-3  lg:right-24 right-8 m-4 cursor-pointer"
             onClick={toggleNavLinks}
@@ -177,7 +177,7 @@ const Navigation = () => {
             </p>
           </div> */}
           <div className="flex justify-center items-center my-8 mx-auto">
-            <p className="text-center text-white ">
+            <p className="text-center max-sm:text-xs text-sm text-white ">
               © 2023 - 2024 Neonflake Enterprises OPC Pvt Ltd. All Rights
               Reserved.
             </p>
