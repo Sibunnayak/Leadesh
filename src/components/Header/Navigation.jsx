@@ -133,7 +133,7 @@ const Navigation = () => {
           </div>
           <div className="flex justify-center items-center my-2 mx-auto">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginRight: "3rem" }}
@@ -141,7 +141,7 @@ const Navigation = () => {
               <FaFacebook style={{ color: "#3b5998" }} size={32} />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.facebook.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginRight: "3rem" }}
@@ -149,7 +149,7 @@ const Navigation = () => {
               <FaInstagram style={{ color: "#e4405f" }} size={32} />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginRight: "3rem" }}
@@ -157,7 +157,7 @@ const Navigation = () => {
               <FaTwitter style={{ color: "#00acee" }} size={32} />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/showcase/leadesh/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -9,7 +9,12 @@ const Footer = () => {
         {/* Company Information */}
         <div className="flex flex-col items-start mb-8  sm:mx-16 lg:w-1/3">
           <div className="mb-2.5 flex flex-row items-center">
-            <img src={logo} loading="lazy" alt="" className="w-16 mr-4 rounded-xl" />
+            <img
+              src={logo}
+              loading="lazy"
+              alt=""
+              className="w-16 mr-4 rounded-xl"
+            />
             <img src={leadesh} loading="lazy" alt="" className="w-20" />
           </div>
 
@@ -60,7 +65,7 @@ const Footer = () => {
               Social Media
             </div>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/showcase/leadesh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base text-white mb-1 hover:underline"
@@ -68,7 +73,7 @@ const Footer = () => {
               Linkedin
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base text-white mb-1 hover:underline"
@@ -76,7 +81,7 @@ const Footer = () => {
               Facebook
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.facebook.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base text-white mb-1 hover:underline"
@@ -84,7 +89,7 @@ const Footer = () => {
               Instagram
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/getleadesh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base text-white mb-2 hover:underline"
