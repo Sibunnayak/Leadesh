@@ -52,9 +52,11 @@ const Home = () => {
                 className="text-light px-4 py-3 me-3 bg-[#3c4dff]"
               >
                 <a
-                  href="https://play.google.com/"
-                  target="_blank"
-                  className="hover:underline"
+                  // href="https://play.google.com/"
+                  // target="_blank"
+                  href="/app-release.apk"
+                  download 
+                  className="hover:underline hover:bg-[#3c4dff]"
                 >
                   Download Android App{" "}
                 </a>

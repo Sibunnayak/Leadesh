@@ -71,13 +71,14 @@ const Navigation = () => {
             >
               FAQs
             </Link>
-            <Link
-              to="/"
+            <a
+              href="/app-release.apk"
+              download
               className="bg-white hover:bg-blue-500 text-black hover:text-white font-bold py-2 px-4 border ml-1 mr-2 border-blue-700 rounded flex items-center"
             >
               <FontAwesomeIcon icon={faDownload} className="me-1" />
               Download App
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -92,7 +93,11 @@ const Navigation = () => {
           <div className="flex justify-center items-center max-sm:mt-16 mt-28">
             <div className="flex items-center">
               <Link to="/" className="logo flex items-center">
-                <img src={logo} alt="logo" className="h-16 p-1 mr-1 rounded-xl" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="h-16 p-1 mr-1 rounded-xl"
+                />
                 <img src={leadesh} loading="lazy" alt="" className="w-20" />
               </Link>
             </div>
@@ -123,13 +128,14 @@ const Navigation = () => {
             <Link to="/faqs" className="block py-2 text-center mb-6">
               FAQs
             </Link>
-            <Link
-              to="/"
+            <a
+              href="/app-release.apk"
+              download
               className="bg-white w-fit mx-auto hover:bg-blue-500 text-black hover:text-white font-bold py-2 px-4 border border-blue-700 rounded flex items-center justify-center"
             >
               <FontAwesomeIcon icon={faDownload} className="mr-1" />
               Download App
-            </Link>
+            </a>
           </div>
           <div className="flex justify-center items-center my-2 mx-auto">
             <a

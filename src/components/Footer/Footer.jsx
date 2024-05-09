@@ -54,9 +54,13 @@ const Footer = () => {
             >
               Pricing
             </ScrollLink>
-            <Link to="/" className="text-base text-white mb-2 hover:underline">
+            <a
+              href="/app-release.apk"
+              download
+              className="text-base text-white mb-2 hover:underline"
+            >
               Download App
-            </Link>
+            </a>
           </div>
 
           {/* Contact Us */}
