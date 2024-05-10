@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import logo from "../../assets/logo.png";
@@ -16,7 +16,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const Navigation = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
-
+  const location = useLocation();
+  // console.log(location.pathname);
   const toggleNavLinks = () => {
     setShowNavLinks(!showNavLinks);
     document.body.style.overflow = showNavLinks ? "auto" : "hidden"; // Toggle body overflow
@@ -36,34 +37,91 @@ const Navigation = () => {
             <img src={hamburger} alt="Hamburger Icon" width={40} />
           </div>
           <div className="hidden xl:flex xl:items-center">
-            <Link
-              to="/"
-              className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
-            >
-              Home
-            </Link>
-            <ScrollLink
-              to="features"
-              smooth={true}
-              duration={500}
-              className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
-            >
-              Features
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+              >
+                Home
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+                onClick={() => {
+                  // Scroll to the Home section after navigating to the home page
+                  setTimeout(() => {
+                    const HomeSection = document.getElementById("home");
+                    if (HomeSection) {
+                      HomeSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Home
+              </Link>
+            )}
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="features"
+                smooth={true}
+                duration={500}
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+              >
+                Features
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+                onClick={() => {
+                  // Scroll to the features section after navigating to the home page
+                  setTimeout(() => {
+                    const featuresSection = document.getElementById("features");
+                    if (featuresSection) {
+                      featuresSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Features
+              </Link>
+            )}
+
             <Link
               to="/about-us"
               className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
             >
               About
             </Link>
-            <ScrollLink
-              to="pricing"
-              smooth={true}
-              duration={500}
-              className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
-            >
-              Pricing
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="pricing"
+                smooth={true}
+                duration={500}
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+              >
+                Pricing
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-lg text-white px-4 py-2 hover:scale-110 transition-transform"
+                onClick={() => {
+                  // Scroll to the pricing section after navigating to the home page
+                  setTimeout(() => {
+                    const PricingSection = document.getElementById("pricing");
+                    if (PricingSection) {
+                      PricingSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Pricing
+              </Link>
+            )}
 
             <Link
               to="/faqs"
@@ -103,28 +161,88 @@ const Navigation = () => {
             </div>
           </div>
           <div className="max-w-md mx-auto mt-12 max-sm:mt-0 p-8 max-sm:text-2xl text-4xl">
-            <Link to="/" className="block py-2 text-center mb-6">
-              Home
-            </Link>
-            <ScrollLink
-              to="features"
-              smooth={true}
-              duration={500}
-              className="block py-2 text-center mb-6"
-            >
-              Features
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="block py-2 text-center mb-6"
+              >
+                Home
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="block py-2 text-center mb-6"
+                onClick={() => {
+                  // Scroll to the Home section after navigating to the home page
+                  setTimeout(() => {
+                    const HomeSection = document.getElementById("home");
+                    if (HomeSection) {
+                      HomeSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Home
+              </Link>
+            )}
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="features"
+                smooth={true}
+                duration={500}
+                className="block py-2 text-center mb-6"
+              >
+                Features
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="block py-2 text-center mb-6"
+                onClick={() => {
+                  // Scroll to the features section after navigating to the home page
+                  setTimeout(() => {
+                    const featuresSection = document.getElementById("features");
+                    if (featuresSection) {
+                      featuresSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Features
+              </Link>
+            )}
+
             <Link to="/about-us" className="block py-2 text-center mb-6">
               About
             </Link>
-            <ScrollLink
-              to="pricing"
-              smooth={true}
-              duration={500}
-              className="block py-2 text-center mb-6"
-            >
-              Pricing
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="pricing"
+                smooth={true}
+                duration={500}
+                className="block py-2 text-center mb-6"
+              >
+                Pricing
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="block py-2 text-center mb-6"
+                onClick={() => {
+                  // Scroll to the Pricing section after navigating to the home page
+                  setTimeout(() => {
+                    const PricingSection = document.getElementById("pricing");
+                    if (PricingSection) {
+                      PricingSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Pricing
+              </Link>
+            )}
             <Link to="/faqs" className="block py-2 text-center mb-6">
               FAQs
             </Link>
@@ -147,7 +265,7 @@ const Navigation = () => {
               <FaFacebook style={{ color: "#3b5998" }} size={32} />
             </a>
             <a
-              href="https://www.facebook.com/getleadesh/"
+              href="https://www.instagram.com/getleadesh"
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginRight: "3rem" }}

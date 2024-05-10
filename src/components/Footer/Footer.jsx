@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import leadesh from "../../assets/Leadesh.png";
 import { Link as ScrollLink } from "react-scroll";
 const Footer = () => {
+  const location = useLocation();
   return (
     <footer className="py-10 border-t bg-gray-900 shadow-lg">
       <div className="flex flex-col lg:flex-row lg:mx-28 mx-10">
@@ -29,31 +30,90 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col mx-10 sm:mx-0">
             <div className="text-xl font-bold mb-2.5 text-white">Links</div>
-            <Link to="/" className="text-base text-white mb-1 hover:underline">
-              Home
-            </Link>
-            <ScrollLink
-              to="features"
-              smooth={true}
-              duration={500}
-              className="text-base text-white mb-1 hover:underline"
-            >
-              Features
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="text-base text-white mb-1 hover:underline"
+              >
+                Home
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-base text-white mb-1 hover:underline"
+                onClick={() => {
+                  // Scroll to the Home section after navigating to the home page
+                  setTimeout(() => {
+                    const HomeSection = document.getElementById("home");
+                    if (HomeSection) {
+                      HomeSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Home
+              </Link>
+            )}
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="features"
+                smooth={true}
+                duration={500}
+                className="text-base text-white mb-1 hover:underline"
+              >
+                Features
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-base text-white mb-1 hover:underline"
+                onClick={() => {
+                  // Scroll to the features section after navigating to the home page
+                  setTimeout(() => {
+                    const featuresSection = document.getElementById("features");
+                    if (featuresSection) {
+                      featuresSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Features
+              </Link>
+            )}
             <Link
               to="/about-us"
               className="text-base text-white mb-1 hover:underline"
             >
               About
             </Link>
-            <ScrollLink
-              to="pricing"
-              smooth={true}
-              duration={500}
-              className="text-base text-white mb-1 hover:underline"
-            >
-              Pricing
-            </ScrollLink>
+            {location.pathname === "/" ? (
+              <ScrollLink
+                to="pricing"
+                smooth={true}
+                duration={500}
+                className="text-base text-white mb-1 hover:underline"
+              >
+                Pricing
+              </ScrollLink>
+            ) : (
+              <Link
+                to="/"
+                className="text-base text-white mb-1 hover:underline"
+                onClick={() => {
+                  // Scroll to the pricing section after navigating to the home page
+                  setTimeout(() => {
+                    const PricingSection = document.getElementById("pricing");
+                    if (PricingSection) {
+                      PricingSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100); // Adjust the delay as needed
+                }}
+              >
+                Pricing
+              </Link>
+            )}
             <a
               href="/app-release.apk"
               download
@@ -85,7 +145,7 @@ const Footer = () => {
               Facebook
             </a>
             <a
-              href="https://www.facebook.com/getleadesh/"
+              href="https://www.instagram.com/getleadesh"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base text-white mb-1 hover:underline"

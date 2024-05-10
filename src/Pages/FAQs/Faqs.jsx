@@ -15,10 +15,6 @@ const Faqs = () => {
           <div className="col-lg-10 mx-auto">
             <div className="mb-6">
               <b className="block text-lg mb-1">Q: What is Leadesh?</b>
-              <p className="">A: Leadesh is a mobile app designed for WhatsApp users. It helps you stay informed by alerting you when specific keywords appear in your WhatsApp conversations.</p>
-            </div>
-            <div className="mb-6">
-              <b className="block text-lg mb-1">Q: What is Leadesh?</b>
               <p className="">A: It's simple. Choose words you care about, and Leadesh will notify you when these words come up in your WhatsApp chats.</p>
             </div>
             <div className="mb-6">
